@@ -1,0 +1,23 @@
+@import '../../../stylesheets/variables';
+@import '../../../stylesheets/mixins';
+
+.partners__items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > div {
+    margin: 20px;
+    flex-basis: 15%;
+  }
+
+  @include breakpoint($small-breakpoint) {
+    > div {
+      flex-basis: 35%;
+    }
+  }
+}

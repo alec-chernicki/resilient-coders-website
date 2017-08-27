@@ -1,0 +1,36 @@
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(33, 38, 45, 0.8);
+  transition: opacity 400ms cubic-bezier(0.52, 0.01, 0.16, 1);
+}
+
+.inactive {
+  composes: overlay;
+  opacity: 0;
+}
+
+.active {
+  composes: overlay;
+  opacity: 1;
+}
+
+.text {
+  height: 2em;
+  display: inline-block;
+  color: #FFF;
+  position: relative;
+  z-index: 100;
+}
+
+.text:after {
+  transition-delay: 150ms !important;
+  background-color: #ED1B24 !important;
+}

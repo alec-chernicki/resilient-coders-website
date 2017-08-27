@@ -1,0 +1,82 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets/mixins';
+
+.news {
+  padding-top: 100px;
+  background-color: $background-primary;
+  padding-bottom: 60px;
+
+  @include breakpoint($small-breakpoint) {
+    padding-bottom: 30px;
+  }
+}
+
+.news-container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.news-page-header {
+  background-color: #FFF;
+  padding: 20px;
+  margin-bottom: 30px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.news-page-footer {
+  margin-top: 30px;
+}
+
+.news-header{
+  color: #21262d;
+  height: 70px;
+
+  .letter {
+    color: #21262d;
+  }
+}
+
+.news-list-container {
+  flex-grow: 2;
+  width: 50%;
+
+  @include breakpoint($small-breakpoint) {
+    width: 100%;
+  }
+
+  & + .news-list-container {
+    margin-left: 30px;
+
+    @include breakpoint($small-breakpoint) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+}
+
+.news-list-title {
+  padding: 15px 20px;
+  @include background-color-with-dots($background-secondary);
+
+  h2 {
+    color: #FFF;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.news-lists {
+  display: flex;
+
+  @include breakpoint($small-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.news-list {
+  background-color: #FFF;
+}

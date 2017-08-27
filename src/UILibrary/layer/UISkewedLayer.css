@@ -1,0 +1,50 @@
+.container {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skewed-layer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: skewY(-12deg);
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1600px) {
+  .skewed-layer {
+    transform: skewY(-6deg);
+  }
+}
+
+.content {
+  transform-origin: top left;
+  transform: skewY(12deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.primary {
+  composes: skewed-layer;
+  background-color: #EDEEF0;
+}
+
+.secondary {
+  composes: skewed-layer;
+  background-color: #FFF;
+}
+
+.tertiary {
+  composes: skewed-layer;
+  background-color: #21262D;
+}

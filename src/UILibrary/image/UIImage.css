@@ -1,0 +1,23 @@
+.default {
+  width: auto;
+}
+
+.responsive {
+  height: auto;
+  width: 100%;
+}
+
+.cover {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+@import './stylesheets/variables';
+@import './stylesheets/utils';
+@import './stylesheets/design-accents';
+@import './stylesheets/mixins';
+@import './stylesheets/animations';
+@import './stylesheets/containers';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background-secondary;
+}

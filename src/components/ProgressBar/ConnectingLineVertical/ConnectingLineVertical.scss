@@ -1,0 +1,25 @@
+@import '../../../stylesheets/variables';
+@import '../../../stylesheets/mixins';
+
+.connecting-line-progress {
+  content: '';
+  width: 100%;
+  position: absolute;
+  background-color: #ED1B24;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.connecting-line {
+  flex-grow: 2;
+  width: 4px;
+  margin: 0 auto;
+  background-color: $background-primary;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint($small-breakpoint) {
+    width: 6px;
+  }
+}

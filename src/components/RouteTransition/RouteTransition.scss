@@ -1,0 +1,57 @@
+@import '../../stylesheets/variables';
+
+@keyframes content-enter {
+  from {
+    height: 0;
+    width: 100%;
+    margin-bottom: 100vh;
+  }
+  to {
+    height: auto;
+    width: 100%;
+    margin-bottom: 100vh;
+    overflow: auto;
+  }
+}
+
+.route-changing-enter {
+  overflow: hidden;
+
+  .route-content {
+    opacity: 0.01;
+    height: 0;
+    width: 100%;
+  }
+}
+
+.route-changing-enter.route-changing-enter-active {
+  .route-content {
+    opacity: 1;
+
+    transition: opacity 250ms ease-in;
+    transition-delay: 250ms;
+
+    animation: content-enter 0ms;
+    animation-delay: 250ms;
+    animation-fill-mode: forwards;
+  }
+}
+
+.route-changing-leave {
+  .route-content {
+    opacity: 1;
+  }
+}
+
+.route-changing-leave-active + footer,
+.route-changing-enter-active + footer,
+footer:nth-child(3) {
+  display: none;
+}
+
+.route-changing-leave.route-changing-leave-active {
+  .route-content {
+    opacity: 0.01;
+    transition: opacity 250ms ease-out;
+  }
+}

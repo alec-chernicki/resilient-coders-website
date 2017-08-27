@@ -1,0 +1,72 @@
+@import '../../../stylesheets/variables';
+@import '../../../stylesheets/mixins';
+@import '../../../stylesheets/animations';
+
+.dot-pulse {
+  border: solid 1px #AAA;
+  top: -9px;
+  left: -9px;
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  z-index: 100;
+  border-radius: 50%;
+  opacity: 0;
+
+  .pulsing & {
+    opacity: 1;
+    animation: pulse-large 2s infinite;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+  }
+}
+
+.dot-with-circle {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  z-index: 100;
+  will-change: transform;
+
+  &:before {
+    content: '';
+    background-color: $background-primary;
+    position: absolute;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    margin: auto;
+    @include transition;
+    will-change: transform;
+  }
+
+  &:after {
+    content: '';
+    border: solid 1px $background-primary;
+    position: absolute;
+    border-radius: 50%;
+    height: 20px;
+    z-index: 80;
+    width: 20px;
+    left: 0;
+    top: 0;
+    background-color: #FFF;
+    will-change: transform;
+    @include transition-property(border-color);
+  }
+
+  &.active:after {
+    border-color: $background-secondary;
+    transform: scale(1.5, 1.5);
+  }
+
+  &.active:before {
+    background-color: #ED1B24;
+    transform: scale(1.2, 1.2)
+  }
+}

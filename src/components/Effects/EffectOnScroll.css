@@ -1,0 +1,25 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    animation-fill-mode: backwards;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    animation-fill-mode: backwards;
+  }
+}
+
+:global(.effect-fade) :local {
+  animation-name: fade-in;
+  animation-timing-function: cubic-bezier(0.52, 0.01, 0.16, 1);
+  animation-duration: 475ms;
+  animation-fill-mode: backwards;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  animation-fill-mode: backwards;
+}

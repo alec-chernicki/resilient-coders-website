@@ -1,0 +1,19 @@
+.section-tertiary {
+  text-align: center;
+  color: #FFF;
+  padding: 45px 0;
+  border-top: solid 4px #ED1B24;
+  overflow: hidden;
+
+  &.section-tertiary__alert {
+    background-color: #FFF;
+
+    h1, h2, h3 {
+      color: #21262d;
+    }
+
+    p {
+      color: #4f5a60;
+    }
+  }
+}
