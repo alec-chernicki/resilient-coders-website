@@ -26,7 +26,7 @@ const rosterMemberRoutes = rosterMembersConfig.map((item, key) => {
 
 export default (
   <Route component={App}>
-    <Route path="/" component={Home} />
+    <Route exact={true} path="/" component={Home} />
     <Route path="bootcamp">
       <Route path="roster" component={Roster} />
       {rosterMemberRoutes}

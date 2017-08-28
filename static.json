@@ -6,6 +6,7 @@
       "origin": "${API_URL}"
     }
   },
+  "error_page": "index.html",
   "redirects": {
     "/donate": {
       "url": "/https://paypal.me/resilientcoders"
