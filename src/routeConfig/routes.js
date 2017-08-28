@@ -25,8 +25,8 @@ const rosterMemberRoutes = rosterMembersConfig.map((item, key) => {
 });
 
 export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={Home} key="home" />
+  <Route component={App}>
+    <Route path="/" component={Home} />
     <Route path="bootcamp">
       <Route path="roster" component={Roster} />
       {rosterMemberRoutes}
@@ -43,8 +43,5 @@ export default (
       <Route path="student" component={GetInvolvedStudent} />
       <Redirect from="mentor" to="volunteer" />
     </Route>
-
-    {/* This is a catch-all instead of a 404. DO NOT REMOVE */}
-    <Redirect from="*" to="/" />
   </Route>
 );

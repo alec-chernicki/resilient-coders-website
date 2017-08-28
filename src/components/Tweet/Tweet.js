@@ -19,14 +19,6 @@ class NewsTweet extends React.Component {
         console.log(e.message);
       });
   }
-  getRecentTweets() {
-    axios
-      .get('https://api.twitter.com/1.1/statuses/user_timeline.json', {
-        screen_name: 'resilientcoders',
-        count: '3',
-      })
-      .then(response => {});
-  }
   render() {
     return (
       <p>
