@@ -103,6 +103,7 @@ class Home extends PureComponent {
     );
   }
   render() {
+    console.log('home');
     return (
       <RouteTransition>
         <Helmet title="Resilient Coders" />
