@@ -32,11 +32,11 @@ export default (
       {rosterMemberRoutes}
       <IndexRoute component={Bootcamp} />
     </Route>
-    <Route path="lab" component={Lab} />
-    <Route path="team" component={Team} />
-    <Route path="news" component={News} />
-    <Route path="diversityplaybook" component={Playbook} />
-    <Route path="get-involved">
+    <Route exact={true} path="lab" component={Lab} />
+    <Route exact={true} path="team" component={Team} />
+    <Route exact={true} path="news" component={News} />
+    <Route exact={true} path="diversityplaybook" component={Playbook} />
+    <Route exact={true} path="get-involved">
       <IndexRoute component={GetInvolved} />
       <Route path="company" component={GetInvolvedCompany} />
       <Route path="volunteer" component={GetInvolvedVolunteer} />
