@@ -116,5 +116,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "reactSnapshot": {
+    "snapshotDelay": 1000
   }
 }

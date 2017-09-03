@@ -25,8 +25,7 @@ const rosterMemberRoutes = rosterMembersConfig.map((item, key) => {
 });
 
 export default (
-  <Route component={App}>
-    <Route exact={true} path="/" component={Home} />
+  <Route path="/" component={App}>
     <Route path="bootcamp">
       <Route path="roster" component={Roster} />
       {rosterMemberRoutes}
@@ -43,5 +42,6 @@ export default (
       <Route path="student" component={GetInvolvedStudent} />
       <Redirect from="mentor" to="volunteer" />
     </Route>
+    <IndexRoute component={Home} />
   </Route>
 );

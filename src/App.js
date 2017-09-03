@@ -14,15 +14,9 @@ class App extends React.Component {
     return (
       <div className="app">
         <Navigation />
-        <ReactCSSTransitionGroup
-          component="div"
-          transitionName="route-changing"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={250}
-        >
-          {React.cloneElement(children, { key: location.pathname })}
-          <Footer />
-        </ReactCSSTransitionGroup>
+
+        {React.cloneElement(children, { key: location.pathname })}
+        <Footer />
       </div>
     );
   }
