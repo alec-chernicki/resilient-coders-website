@@ -1,6 +1,7 @@
 import './index.scss';
 import React from 'react';
-import { render } from 'react-snapshot';
+import ReactDOM from 'react-dom';
+import * as ReactSnapshot from 'react-snapshot';
 import { Router, browserHistory } from 'react-router';
 import routes from './routeConfig/routes';
 import GoogleAnalytics from 'react-ga';
@@ -20,15 +21,20 @@ const logPageView = state => {
   _hsq.push(['trackPageView']);
 };
 
-(function () {
-  debugger
+const ComponentToMount = (
+  <Router history={browserHistory} onUpdate={logPageView}>
+    {routes}
+  </Router>
+);
 
-  render(
-    <Router history={browserHistory} onUpdate={logPageView}>
-      {routes}
-    </Router>,
-    document.getElementById('root')
-  );
-})()
+const rootEl = document.getElementById('root');
+
+if (!document || !window) {
+  ReactSnapshot.render(<ComponentToMount />, rootEl);
+} else {
+  ReactDOM.render(<ComponentToMount />, rootEl);
+}
+
+
 
 registerServiceWorker();
