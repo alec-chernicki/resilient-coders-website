@@ -21,8 +21,8 @@ const logPageView = state => {
 };
 
 (function () {
-  console.log('rendering');
-  
+  debugger
+
   render(
     <Router history={browserHistory} onUpdate={logPageView}>
       {routes}
