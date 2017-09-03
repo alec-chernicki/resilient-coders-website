@@ -20,11 +20,15 @@ const logPageView = state => {
   _hsq.push(['trackPageView']);
 };
 
-render(
-  <Router history={browserHistory} onUpdate={logPageView}>
-    {routes}
-  </Router>,
-  document.getElementById('root')
-);
+(function () {
+  console.log('rendering');
+  
+  render(
+    <Router history={browserHistory} onUpdate={logPageView}>
+      {routes}
+    </Router>,
+    document.getElementById('root')
+  );
+})()
 
 registerServiceWorker();
